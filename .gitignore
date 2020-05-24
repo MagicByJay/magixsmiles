@@ -1,5 +1,4 @@
 node_modules/
 package-lock.json
-frontend/public/
 __pycache__/
 .env
