@@ -15,11 +15,11 @@ jobs:
         node-version: '12.x'
     - name: Copy files to public directory
       run: |
-        mkdir -p ./frontend/mysite.io/public
-        cp index.html ./frontend/mysite.io/public
+        npm install
+        npm run now-build
     - name: Deploy to GH Pages
       uses: peaceiris/actions-gh-pages@v2.5.0
       env: 
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./frontend/mysite.io/public
+        PUBLISH_DIR: ./frontend/public
