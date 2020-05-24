@@ -1,0 +1,14 @@
+---
+title: Blog Paged
+pagination:
+    data: blog_entries.entries
+    size: 2
+    alias: posts
+permalink: "blog/{{ posts[0].title | slug }}.html"
+---
+ {{ posts[0].title | slug }}
+<ul>
+    {%- for post in posts %}
+    <li>{{ post.title }} - {{ post.title }} </li>
+    {% endfor -%}
+</ul>
