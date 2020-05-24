@@ -1,6 +1,4 @@
-{
-    "entries":
-    [
+[
         {
             "title": "first post",
             "date" : "2020-01-01"
@@ -8,6 +6,9 @@
         {
             "title": "second post",
             "date" : "2020-02-02"
+        },
+        {
+            "title": "third post",
+            "date" : "2020-03-03"
         }
     ]
-}

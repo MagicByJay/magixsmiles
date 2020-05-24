@@ -1,14 +1,18 @@
 ---
 title: Blog Page
 pagination:
-    data: blog_entries.entries
-    size: 100
-    alias: posts
-permalink: "blog/{{ posts[pagination.pageNumber].title | slug }}.html"
+  data: blog_entries
+  size: 1
+  alias: wonder
+permalink: "blog/{{ pagination.items[0].title | slug }}.html"
 ---
- {{ posts.pages }}
+ pages - {{ pagination.pages }}
+<br/>
+ links - {{ pagination.hrefs }}
+<br/>
+items -  {{ pagination.items[0].title }}
 <ul>
-    {%- for post in posts %}
-    <li>{{ post.title }}  </li>
+    {%- for post in wonder %}
+    <li>{{ post}}  </li>
     {% endfor -%}
 </ul>
