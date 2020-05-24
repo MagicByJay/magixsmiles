@@ -1,0 +1,23 @@
+{
+  "name": "magixsmiles",
+  "version": "1.0.0",
+  "description": "Photoboth Company",
+  "main": "index.js",
+  "scripts": {
+    "local-dev": "npx @11ty/eleventy --input=frontend --output=frontend/public --serve",
+    "now-build": "npx @11ty/eleventy --input=frontend --output=frontend/public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicByJay/magixsmiles.git"
+  },
+  "author": "Magic By Jay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagicByJay/magixsmiles/issues"
+  },
+  "homepage": "https://github.com/MagicByJay/magixsmiles#readme",
+  "devDependencies": {
+        "@11ty/eleventy": "^0.11.0"
+    }
+}
