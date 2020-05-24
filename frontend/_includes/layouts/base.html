@@ -1,11 +1,25 @@
+
+{% if renderData.title %}
+{% capture  title_data %} | {{ renderData.title }} {% endcapture %}
+
+{% else %}
+
+{% assign title_data = "" %}
+
+{% endif %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Magixsmiles</title>
+    <title>Magixsmiles {{ title_data }}</title>
 </head>
 <body>
+{% include header.html %}
+
     {{ content }}
+
+{% include footer.html %}
 </body>
 </html>
