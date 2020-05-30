@@ -14,12 +14,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Magixsmiles {{ title_data }}</title>
+    <script src="./reveal/dist/reveal.js"></script>
+    <link rel="stylesheet" href="./reveal/dist/reveal.css">
+	<link rel="stylesheet" href="./reveal/dist/theme/white.css">
+    <style>
+   .reveal .slides section.title .grid-wrapper {    
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "content content"
+        ". credit";
+    grid-template-columns: auto 40%;
+    grid-template-rows: 6vmin 1fr auto;
+    grid-column-gap: 10vmin;
+    height: 100%;
+    padding: 10vmin;
+    }
+    .logo {
+    grid-area: header;
+    }
+    .content {
+    align-self: center;
+    grid-area: content;
+    }
+    .credit {
+    grid-area: credit;
+    }
+
+    @media (max-width: 568px) {
+    .grid-wrapper {
+        grid-template-areas: "header" "content" "credit";
+        grid-template-columns: auto;
+    }
+    .credit {
+        justify-self: end;
+    }
+    }
+
+    @media (min-width: 1280px) {
+    .content {
+        display: grid;
+        grid-template-areas: "title description";
+        grid-template-columns: auto 40%;
+        grid-column-gap: 10vmin;
+    }
+    h1 {
+        grid-area: title;
+    }
+    .description {
+        grid-area: description;
+    }
+    }
+
+    </style>
+  
 </head>
 <body>
+<div class="reveal">
+<div class="slides">
 {% include header.html %}
 
     {{ content }}
 
 {% include footer.html %}
+</div>
+</div>
+
+<script>
+  Reveal.initialize({ 
+      
+       width: "100%",
+        height: "100%",
+        margin: 0,
+        minScale: 1,
+        maxScale: 1
+      
+      });
+</script>
 </body>
 </html>
