@@ -15,80 +15,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Magixsmiles {{ title_data }}</title>
 	<script src="./reveal/dist/reveal.js"></script>
-	<link rel="stylesheet" href="./reveal/dist/reveal.css">
-	<link rel="stylesheet" href="./reveal/dist/theme/black.css">
-	<style>
-		.reveal .slides section.title .grid-wrapper {
-			box-sizing: border-box;
-			display: grid;
-			grid-template-areas:
-				"header header"
-				"content content"
-				". credit";
-			grid-template-columns: auto 40%;
-			grid-template-rows: 6vmin 1fr auto;
-			grid-column-gap: 10vmin;
-			height: 100%;
-			padding: 10vmin;
-		}
-
-		.logo {
-			grid-area: header;
-		}
-
-		.content {
-			align-self: center;
-			grid-area: content;
-		}
-
-		.credit {
-			grid-area: credit;
-		}
-
-        /**
-         overrides begin
-        **/
-
-        .reveal h1{
-                color: #E25462;
-            }
-
-        .description {
-            color: #FCFDFD;
-        }
-		
-        /**
-            overrides end
-        **/
-
-		@media (max-width: 568px) {
-			.grid-wrapper {
-				grid-template-areas: "header""content""credit";
-				grid-template-columns: auto;
-			}
-
-			.credit {
-				justify-self: end;
-			}
-		}
-
-		@media (min-width: 1280px) {
-			.content {
-				display: grid;
-				grid-template-areas: "title description";
-				grid-template-columns: auto 40%;
-				grid-column-gap: 10vmin;
-			}
-
-			h1 {
-				grid-area: title;
-			}
-
-			.description {
-				grid-area: description;
-			}
-		}
-	</style>
+    <link rel="stylesheet" href="./reveal/dist/reveal.css">
 
 </head>
 
@@ -96,22 +23,11 @@
 	<div class="reveal">
 		<div class="slides">
 			<section data-background-color="rgb(0, 0, 0)">
-				<div class="grid-wrapper">
-					<div class="header">
-					</div>
-					<div class="content">
-						<h1>Heading test 🐟</h1>
-                        <div class="description">
-                        
-								This is where the description goes. Keep it short and sweet.
-							
-                        </div>
-					</div>
-                    <div class="credit">
-                    <!-- footer goes here-->
-                    </div>
+				<h1>Heading test 🐟</h1>
+				<p>
 
-				</div>
+					This is where the description goes. Keep it short and sweet.
+				</p>
 
 			</section>
 		</div>
