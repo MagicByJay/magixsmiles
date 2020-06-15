@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <body>
+    <outline text="Food parcels" _note="Food for those in need">
+      <outline text="To start 🏃‍♂️" heading="3">
+        <outline text="Food items">
+          <outline text="Mince and rice"/>
+        </outline>
+        <outline text="Stove"/>
+        <outline text="R100 or so to prepare the meal"/>
+      </outline>
+      <outline text="Goal 🎯" heading="3">
+        <outline text="Feed 5 - 10 people once or twice a week"/>
+      </outline>
+      <outline text="The Numbers 🧾" heading="3">
+        <outline text="Roughly a R1000 a month if feeding 5 people twice a week (R100 x 4 weeks x 2 plus extras) "/>
+      </outline>
+      <outline text="Not a success if... 💔" heading="3">
+        <outline text="Nothing will make it a failure"/>
+      </outline>
+    </outline>
+  </body>
