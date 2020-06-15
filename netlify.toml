@@ -1,8 +1,14 @@
 # Production context:
 # All deploys from the main repository branch
 # will inherit these settings.
-#[context.production]
-#  command = "make production"
+[context.production]
+  command = '''
+  source /opt/buildhome/python3.7/bin/activate
+  pip install -r requirements.txt
+  python3 import_data.py
+  cat sample.json
+  npm run now-build
+  '''
 #  [context.production.environment]
 #    ACCESS_TOKEN = "super secret"
 
