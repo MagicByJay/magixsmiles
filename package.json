@@ -4,8 +4,9 @@
   "description": "Photoboth Company",
   "main": "index.js",
   "scripts": {
-    "local-dev": "npx @11ty/eleventy --input=frontend --output=frontend/public --serve",
-    "now-build": "npx @11ty/eleventy --input=frontend --output=frontend/public"
+    "css-output": "npx tailwindcss build styles.css -o frontend/css/styles.css",
+    "local-dev": "npm run css-output && npx @11ty/eleventy --input=frontend --output=frontend/public --serve",
+    "now-build": "npm run css-output && npx @11ty/eleventy --input=frontend --output=frontend/public"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/MagicByJay/magixsmiles#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "tailwindcss": "^1.4.6"
   }
 }
