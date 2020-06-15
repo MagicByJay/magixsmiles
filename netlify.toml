@@ -21,6 +21,7 @@
   pip install -r requirements.txt
   python3 import_data.py
   cat sample.json
+  npm run now-build
   '''
 
 # Specific branch context:
