@@ -7,14 +7,22 @@ renderData:
 
 <section data-background-color="aquamarine">
   <h2>{{ introHeading }} 🐟</h2>
-  <ul>
-  {%- for data in home[0].body.outline %}
-
-  {% if data[0].outline %}
-    <li>yes</li>
-  {% else %}
-    <li> {{ data }}</li>
+  {% for data in home[0].body.outline %}
+  {% if forloop.first %}
+    <p>There are {{ forloop.length }} in collection</p>
   {% endif %}
-  {% endfor -%}
-  </ul>
+    <p> {{ forloop.index0 }} - {{data[0]}}</p>
+    {% if data[0] == 'outline' %}
+        <p style="color:red"> there's more...</p>
+        {% for inner_data1 in data[1] %}
+           <p> {{ forloop.index0 }} - {{inner_data1}}</p>
+            {% if inner_data1[0] == 'outline' %}
+                <p style="color:red"> there's more...</p>
+                {% for inner_data2 in inner_data1[1] %}
+                    <p> {{ inner_data2 }} </p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+  {% endfor %}
 </section>
