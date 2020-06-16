@@ -15,7 +15,7 @@ renderData:
     {% if data[0] == 'outline' %}
         <p style="color:red"> there's more...</p>
         {% for inner_data1 in data[1] %}
-           <p> {{ forloop.index0 }} - {{inner_data1}}</p>
+           <p> {{ forloop.index0 }} - {{inner_data1.outline}}</p>
             {% if inner_data1[0] == 'outline' %}
                 <p style="color:red"> there's more...</p>
                 {% for inner_data2 in inner_data1[1] %}
