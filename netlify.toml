@@ -6,8 +6,11 @@
   source /opt/buildhome/python3.7/bin/activate
   pip install -r requirements.txt
   python3 import_data.py
-  cat sample.json
-  npm run now-build
+  for file in hold_data/*; do
+    echo ']' >> 'hold_data/'"${file##*/}"
+    sed -i '1s/^/\[/' 'hold_data/'"${file##*/}"
+  done
+  cp -r hold_data/* frontend/_data
   '''
 #  [context.production.environment]
 #    ACCESS_TOKEN = "super secret"

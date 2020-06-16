@@ -3,4 +3,6 @@ package-lock.json
 frontend/public/
 __pycache__/
 sample.json
+hold_data/
+frontend/_data/
 .env
