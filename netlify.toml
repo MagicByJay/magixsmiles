@@ -4,6 +4,7 @@
 [context.production]
   command = '''
   source /opt/buildhome/python3.7/bin/activate
+  mkdir hold_data
   pip install -r requirements.txt
   python3 import_data.py
   for file in hold_data/*; do
@@ -27,6 +28,7 @@
 [context.branch-deploy]
   command = '''
   source /opt/buildhome/python3.7/bin/activate
+  mkdir hold_data
   pip install -r requirements.txt
   python3 import_data.py
   for file in hold_data/*; do
